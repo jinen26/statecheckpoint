@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Playerlist from './Playerlist';
+import Modal from './Modal';
 function App() {
+  let players= [
+    {name: 'Hannibal Mejbri',
+    image:'https://cdnfr.africanmanager.com/wp-content/uploads/2022/01/Hannibal-Mejbri.jpg',
+  nationality:'Tunisian',},
+  { name:'Cristiano Ronaldo',
+image:'https://www.planetsport.com/image-library/square/1200/c/cristiano-ronaldo-portugal-5-june-2022.jpg',
+nationality:'Portuguese'},
+{ name:'Lionel Messi',
+image:'https://cdn.britannica.com/35/238335-050-2CB2EB8A/Lionel-Messi-Argentina-Netherlands-World-Cup-Qatar-2022.jpg',
+nationality:'Argentina',}
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<Playerlist players={players}/>
     </div>
   );
 }
